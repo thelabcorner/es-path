@@ -114,6 +114,7 @@ Also from the same team: **[ArcFit.dev](https://arcfit.dev)**, deterministic arc
 
 - [Why ESPATH?](#why-espath)
 - [Features](#features)
+- [Get the Release](#get-the-release)
 - [Installation](#installation)
 - [Quick Start](#quick-start)
 - [API](#api)
@@ -150,6 +151,34 @@ POSIX and Windows behavior stay separate. `resolve()` requires an explicit absol
 - Lexical path scanning preserves embedded U+0000 because it uses `charCodeAt()`; file-URI conversion deliberately rejects U+0000.
 - Runtime code performs no filesystem I/O, reads no host/process environment, patches no built-ins, and has no native/ExternalObject lane.
 - The current ESTC artifact is 24,960 bytes and passes both static Acorn ES3 and live Illustrator parsing.
+
+---
+
+## Get the Release
+
+<div align="center">
+
+**All production bundles ship as GitHub release assets — this repo holds
+sources. Grab the runnable builds from the
+[Releases page](https://github.com/thelabcorner/es-path/releases).**
+
+[![Latest release](https://img.shields.io/github/v/release/thelabcorner/es-path?display_name=tag)](https://github.com/thelabcorner/es-path/releases/latest)
+[![Release date](https://img.shields.io/github/release-date/thelabcorner/es-path)](https://github.com/thelabcorner/es-path/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/thelabcorner/es-path/total)](https://github.com/thelabcorner/es-path/releases)
+
+</div>
+
+**How it works, in three steps:**
+
+1. Open the [Releases page](https://github.com/thelabcorner/es-path/releases).
+2. Pick the **latest stable** tag.
+3. Download the asset that matches your use case:
+
+| You are... | Take this release | And this asset |
+|---|---|---|
+| Loading ESPATH in an Adobe ExtendScript host | Latest stable | `ESPATH.jsx` |
+| Consuming ESPATH from Node or build tooling | Latest stable | `espath-core.esm.mjs` |
+| Integrating the ESM surface with TypeScript | Latest stable | `index.d.ts` + `path-core.d.ts` |
 
 ---
 
