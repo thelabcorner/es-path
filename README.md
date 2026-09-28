@@ -269,9 +269,9 @@ The existing string-tail implementation is retained. No array-stack alternative 
 
 ### Live ExtendScript measurements
 
-The current release-candidate live verifier ran on Adobe Illustrator 30.6.0 / ExtendScript 4.5.6. It uses two warmups and seven retained `$.hiresTimer` samples per lane, discarding non-positive and >10 s samples.
+The release-candidate live verifier runs on Adobe Illustrator 30.6.0 / ExtendScript 4.5.6. It uses two warmups and seven retained `$.hiresTimer` samples per lane, discarding non-positive and >10 s samples. The table below is one pre-publication measurement series; repeated release-gate runs are expected to vary with host load.
 
-| Live lane | Input size | Loops/sample | Median µs/op (current release gate) |
+| Live lane | Input size | Loops/sample | Median µs/op (sampled series) |
 |---|---:|---:|---:|
 | POSIX short lexical normalize | 1,095 | 300 | 103.72 |
 | Win32 short lexical normalize | 1,097 | 300 | 91.64 |
